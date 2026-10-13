@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="is-held">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>محمد &amp; هبة · Mohammed &amp; Heba</title>
+  <meta name="description" content="يتشرّف السيد نهاد جاسر السيد بدعوتكم لحضور حفل زفاف نجله محمد على الدكتورة هبة مجدي البلعاوي">
+  <meta name="theme-color" content="#4A0B17">
+  <meta property="og:title" content="محمد &amp; هبة · Mohammed &amp; Heba">
+  <meta property="og:description" content="دعوة زفاف · Düğün Davetiyesi · Wedding Invitation">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%235B0F1D'/%3E%3Ctext x='32' y='41' font-size='24' text-anchor='middle' fill='%23D9B979' font-family='serif'%3EMH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-locked">
+
+  <!-- Floating controls (sound + language), like the reel -->
+  <div class="controls">
+    <div class="lang" id="lang">
+      <button class="ctrl ctrl--lang" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 5h9M7.5 3v2M5 5c1 4 4 7 7 8M10 5c-1 4-4 7-7 8M13 21l4-10 4 10M14.5 17.5h5"/></svg>
+        <span id="langCode">AR</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <ul class="lang__menu" id="langMenu" role="menu" hidden></ul>
+    </div>
+  </div>
+
+  <!-- Gatefold: two embossed doors tied with a satin ribbon and a wax seal -->
+  <div class="gate" id="gate">
+    <div class="door door--left"><div class="door__paper"><span class="door__band"></span></div></div>
+    <div class="door door--right"><div class="door__paper"><span class="door__band"></span></div></div>
+
+    <div class="bow" aria-hidden="true">
+      <svg viewBox="0 0 260 300" width="100%" height="100%">
+        <defs>
+          <linearGradient id="satin" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F3DFAE"/>
+            <stop offset=".35" stop-color="#D2AE6A"/>
+            <stop offset=".55" stop-color="#F0D9A2"/>
+            <stop offset=".8" stop-color="#B98F4C"/>
+            <stop offset="1" stop-color="#E2C487"/>
+          </linearGradient>
+          <linearGradient id="satinDark" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#C9A25E"/>
+            <stop offset="1" stop-color="#8E6A2E"/>
+          </linearGradient>
+        </defs>
+        <g class="bow__tails">
+          <path d="M122 92C112 150 92 214 70 292L96 276L112 298C122 230 128 160 134 96Z" fill="url(#satin)"/>
+          <path d="M122 92C112 150 92 214 70 292L96 276" fill="none" stroke="#8E6A2E" stroke-opacity=".35"/>
+          <path d="M138 92C150 150 170 210 196 288L170 274L156 298C144 230 134 160 126 96Z" fill="url(#satin)"/>
+          <path d="M138 92C150 150 170 210 196 288" fill="none" stroke="#8E6A2E" stroke-opacity=".35"/>
+        </g>
+        <g class="bow__loops">
+          <path d="M130 84C100 40 38 22 22 58C8 92 72 108 130 88Z" fill="url(#satin)"/>
+          <path d="M130 84C104 58 60 48 40 64" fill="none" stroke="#8E6A2E" stroke-opacity=".45" stroke-width="1.5"/>
+          <path d="M130 86C70 98 40 84 34 70" fill="none" stroke="#FFF3D6" stroke-opacity=".5" stroke-width="1.2"/>
+          <path d="M130 84C160 40 222 22 238 58C252 92 188 108 130 88Z" fill="url(#satin)"/>
+          <path d="M130 84C156 58 200 48 220 64" fill="none" stroke="#8E6A2E" stroke-opacity=".45" stroke-width="1.5"/>
+          <path d="M130 86C190 98 220 84 226 70" fill="none" stroke="#FFF3D6" stroke-opacity=".5" stroke-width="1.2"/>
+          <ellipse cx="130" cy="86" rx="20" ry="24" fill="url(#satinDark)"/>
+        </g>
+      </svg>
+    </div>
+
+    <button class="seal" id="seal" type="button">
+      <span class="sr-only" data-i18n="introHint"></span>
+      <svg viewBox="0 0 120 120" width="100%" height="100%" aria-hidden="true">
+        <defs>
+          <radialGradient id="wax" cx=".38" cy=".32" r=".75">
+            <stop offset="0" stop-color="#9A2A3E"/>
+            <stop offset=".55" stop-color="#6A1222"/>
+            <stop offset="1" stop-color="#3E0610"/>
+          </radialGradient>
+          <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F6E3B4"/>
+            <stop offset=".5" stop-color="#C9A25E"/>
+            <stop offset="1" stop-color="#EBD29A"/>
+          </linearGradient>
+        </defs>
+        <path id="sealBlob" fill="url(#wax)"/>
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#2E040B" stroke-opacity=".55" stroke-width="2.5"/>
+        <circle cx="60.8" cy="60.8" r="40" fill="none" stroke="#C25067" stroke-opacity=".35" stroke-width="1"/>
+        <circle cx="60" cy="60" r="35" fill="#5A0D1B" fill-opacity=".35"/>
+        <g font-family="Cormorant Garamond, serif" font-style="italic" font-weight="600" fill="url(#foil)" text-anchor="middle">
+          <text x="40" y="73" font-size="36">M</text>
+          <text x="60.5" y="58" font-size="15">&amp;</text>
+          <text x="81" y="73" font-size="36">H</text>
+        </g>
+      </svg>
+    </button>
+
+    <p class="gate__guest" id="gateGuest" hidden></p>
+    <p class="gate__hint" data-i18n="introHint"></p>
+  </div>
+
+  <!-- The invitation paper -->
+  <main class="paper" id="paper">
+
+    <section class="hero">
+      <h1 class="names">
+        <span class="names__one ink" data-i18n="groomFirst"></span>
+        <span class="names__and ink" data-i18n="and"></span>
+        <span class="names__two ink" data-i18n="brideFirst"></span>
+      </h1>
+      <div class="datebar">
+        <span class="datebar__side" id="dbWeekday"></span>
+        <span class="datebar__day" id="dbDay"></span>
+        <span class="datebar__side" id="dbYear"></span>
+      </div>
+      <p class="datebar__month" id="dbMonth"></p>
+    </section>
+
+    <section class="block invite rv">
+      <p class="basmala">بسم الله الرحمن الرحيم</p>
+      <p class="verse" data-i18n="verse"></p>
+      <p class="verse-ref" data-i18n="verseRef"></p>
+      <div class="invite__card">
+        <p class="love" data-i18n="withLove"></p>
+        <p class="invite__host" data-i18n="inviteHost"></p>
+        <p class="invite__lead" data-i18n="lead"></p>
+        <p class="person">
+          <span class="person__title" data-i18n="groomTitle"></span>
+          <span class="person__name" data-i18n="groomName"></span>
+        </p>
+        <p class="fullname__and" data-i18n="onBride"></p>
+        <p class="person">
+          <span class="person__title" data-i18n="brideTitle"></span>
+          <span class="person__name" data-i18n="brideName"></span>
+        </p>
+        <p class="invite__tail" data-i18n="tail"></p>
+      </div>
+    </section>
+
+    <section class="block rv">
+      <h2 class="heading" data-i18n="saveTitle"></h2>
+      <div class="cal">
+        <p class="cal__title" id="calTitle"></p>
+        <div class="cal__grid" id="calGrid"></div>
+      </div>
+      <button class="btn" id="calBtn" type="button" data-i18n="addCalendar"></button>
+    </section>
+
+    <section class="block rv">
+      <h2 class="heading" data-i18n="detailsTitle"></h2>
+      <div class="tabs" id="tabs" role="tablist" hidden></div>
+      <article class="card" id="eventCard"></article>
+    </section>
+
+    <section class="block rv">
+      <h2 class="heading" data-i18n="countdownTitle"></h2>
+      <p class="sub" id="countSub"></p>
+      <div class="count" id="count">
+        <div class="count__cell"><span class="count__num" id="cdD">0</span><span class="count__lbl" data-i18n="days"></span></div>
+        <div class="count__cell"><span class="count__num" id="cdH">0</span><span class="count__lbl" data-i18n="hours"></span></div>
+        <div class="count__cell"><span class="count__num" id="cdM">0</span><span class="count__lbl" data-i18n="minutes"></span></div>
+        <div class="count__cell"><span class="count__num" id="cdS">0</span><span class="count__lbl" data-i18n="seconds"></span></div>
+      </div>
+      <p class="sub" id="countDone" hidden data-i18n="countdownDone"></p>
+    </section>
+
+    <section class="block rv" id="rsvp">
+      <h2 class="heading" data-i18n="rsvpTitle"></h2>
+      <p class="sub" data-i18n="rsvpText"></p>
+      <form class="rsvp" id="rsvpForm" novalidate>
+        <label class="field">
+          <span data-i18n="rsvpName"></span>
+          <input type="text" id="rsvpName" autocomplete="name">
+        </label>
+        <div class="choices" role="radiogroup">
+          <label class="choice"><input type="radio" name="attend" value="yes" checked><span data-i18n="rsvpYes"></span></label>
+          <label class="choice"><input type="radio" name="attend" value="no"><span data-i18n="rsvpNo"></span></label>
+        </div>
+        <label class="field" id="guestsField">
+          <span data-i18n="rsvpGuests"></span>
+          <select id="rsvpGuests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+        </label>
+        <label class="field">
+          <span data-i18n="rsvpMessage"></span>
+          <textarea id="rsvpMessage" rows="3"></textarea>
+        </label>
+        <p class="rsvp__error" id="rsvpError" hidden data-i18n="rsvpError"></p>
+        <button class="btn btn--block" type="submit" data-i18n="rsvpSend"></button>
+      </form>
+    </section>
+
+    <footer class="block end rv">
+      <p class="end__text" data-i18n="closing"></p>
+      <p class="end__names" data-i18n="shortNames"></p>
+      <p class="end__families" data-i18n="families"></p>
+    </footer>
+
+    <div class="credit">
+      <button class="credit__btn" id="makerBtn" type="button" aria-haspopup="dialog">
+        <span data-i18n="madeWith"></span> <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.6 4.5c2.1 0 3.6 1.2 5.4 3.1 1.8-1.9 3.3-3.1 5.4-3.1 3.6 0 5.7 3.8 4.2 7.2C19.5 16.4 12 21 12 21z"/></svg> <span data-i18n="madeBy"></span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Who made the site -->
+  <dialog class="maker" id="makerDialog" aria-labelledby="makerName">
+    <button class="maker__close" id="makerClose" type="button" aria-label="×">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <span class="maker__mark" aria-hidden="true">W</span>
+    <p class="maker__name" id="makerName" data-i18n="makerName"></p>
+    <p class="maker__role" data-i18n="makerRole"></p>
+    <p class="maker__note" data-i18n="makerNote"></p>
+    <p class="maker__phone" id="makerPhone" dir="ltr"></p>
+    <div class="maker__actions" id="makerActions">
+      <a class="btn" id="makerWa" target="_blank" rel="noopener" data-i18n="makerWhatsapp"></a>
+      <a class="btn btn--line" id="makerCall" data-i18n="makerCall"></a>
+    </div>
+  </dialog>
+
+  <!-- Artwork used to draw the downloadable card image (not shown on the page) -->
+  <div class="card-source" aria-hidden="true">
+      <article class="icard" id="icard">
+        <svg class="icard__satin" viewBox="0 0 400 640" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="silkV" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#DCC49B"/>
+              <stop offset=".3" stop-color="#FFF9EC"/>
+              <stop offset=".55" stop-color="#E6D0A8"/>
+              <stop offset=".78" stop-color="#FBF2E0"/>
+              <stop offset="1" stop-color="#E9D8B8"/>
+            </linearGradient>
+            <linearGradient id="silkH" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E2CDA6"/>
+              <stop offset=".45" stop-color="#FFF8EA"/>
+              <stop offset="1" stop-color="#E8D5B2"/>
+            </linearGradient>
+            <filter id="silkShadow" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="1.5" stdDeviation="3" flood-color="#8A6A36" flood-opacity=".28"/>
+            </filter>
+          </defs>
+          <g filter="url(#silkShadow)">
+            <path d="M0 0H400V30C330 52 270 20 200 42C140 60 92 30 44 54C24 63 10 60 0 64Z" fill="url(#silkH)"/>
+            <path d="M0 640H400V614C322 592 252 632 172 608C112 592 62 622 0 602Z" fill="url(#silkH)"/>
+            <path d="M0 0H64C42 92 72 172 46 262C26 332 60 422 36 522C26 572 42 612 32 640H0Z" fill="url(#silkV)"/>
+            <path d="M400 0V640H362C374 560 352 470 372 380C390 300 358 200 374 110C380 60 370 30 382 0Z" fill="url(#silkV)"/>
+          </g>
+          <g fill="none" stroke="#FFFFFF" stroke-linecap="round" opacity=".75">
+            <path d="M30 0C16 96 44 178 22 270C6 340 36 430 16 530" stroke-width="2.4"/>
+            <path d="M386 20C392 110 372 200 388 290C398 360 380 460 390 600" stroke-width="2"/>
+            <path d="M60 18C140 40 220 8 330 22" stroke-width="1.6"/>
+            <path d="M40 626C120 606 200 628 330 618" stroke-width="1.6"/>
+          </g>
+          <g fill="none" stroke="#B89A66" stroke-linecap="round" opacity=".35">
+            <path d="M48 40C30 130 58 200 36 290C20 350 48 440 26 560" stroke-width="1.2"/>
+            <path d="M376 60C384 150 364 230 380 320C390 400 372 480 380 590" stroke-width="1.2"/>
+          </g>
+        </svg>
+
+        <svg class="icard__flowers icard__flowers--side" id="flowersSide" viewBox="0 0 160 420" aria-hidden="true"></svg>
+        <svg class="icard__flowers icard__flowers--corner" id="flowersCorner" viewBox="0 0 200 200" aria-hidden="true"></svg>
+
+        <div class="icard__seal" aria-hidden="true">
+          <svg viewBox="0 0 120 120" width="100%" height="100%">
+            <defs>
+              <radialGradient id="ivoryWax" cx=".38" cy=".32" r=".75">
+                <stop offset="0" stop-color="#FFF6DE"/>
+                <stop offset=".55" stop-color="#E3CB98"/>
+                <stop offset="1" stop-color="#B8935A"/>
+              </radialGradient>
+            </defs>
+            <path class="seal-blob" fill="url(#ivoryWax)"/>
+            <circle cx="60" cy="60" r="40" fill="none" stroke="#9C7A42" stroke-opacity=".5" stroke-width="2.5"/>
+            <circle cx="60.8" cy="60.8" r="40" fill="none" stroke="#FFF8E6" stroke-opacity=".7" stroke-width="1"/>
+            <g font-family="Cormorant Garamond, serif" font-style="italic" font-weight="600" fill="#9C7A42" text-anchor="middle">
+              <text x="40" y="73" font-size="36">M</text>
+              <text x="60.5" y="58" font-size="15">&amp;</text>
+              <text x="81" y="73" font-size="36">H</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="icard__body">
+          <p class="ic-basmala">بسم الله الرحمن الرحيم</p>
+          <p class="ic-verse" data-i18n="verse"></p>
+          <h1 class="ic-title" data-i18n="cardTitle"></h1>
+          <p class="ic-poem" data-i18n="cardPoem"></p>
+          <p class="ic-line" data-i18n="cardHonor"></p>
+          <div class="ic-pair">
+            <div class="ic-col">
+              <span class="ic-small" data-i18n="hostTitle"></span>
+              <span class="ic-host" data-i18n="groomFather"></span>
+              <span class="ic-kunya" data-i18n="groomFatherKunya"></span>
+            </div>
+            <div class="ic-col">
+              <span class="ic-small" data-i18n="hostTitle"></span>
+              <span class="ic-host" data-i18n="brideFather"></span>
+              <span class="ic-kunya" data-i18n="brideFatherKunya"></span>
+            </div>
+          </div>
+          <p class="ic-line" data-i18n="cardInvite"></p>
+          <div class="ic-pair ic-pair--couple">
+            <div class="ic-col">
+              <span class="ic-small" data-i18n="groomRel"></span>
+              <span class="ic-small" data-i18n="groomTitle"></span>
+              <span class="ic-name" data-i18n="groomFirst"></span>
+            </div>
+            <svg class="ic-rings" viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="#B8935A" stroke-width="2.2"><circle cx="24" cy="22" r="13"/><circle cx="40" cy="22" r="13"/></g><path d="M20 8l4-5 4 5-4 3z" fill="#E3CB98" stroke="#B8935A" stroke-width=".8"/></svg>
+            <div class="ic-col">
+              <span class="ic-small" data-i18n="brideRel"></span>
+              <span class="ic-small" data-i18n="brideTitle"></span>
+              <span class="ic-name" data-i18n="brideFirst"></span>
+            </div>
+          </div>
+          <p class="ic-line" id="cardDay"></p>
+          <div class="ic-info">
+            <div class="ic-info__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+              <span id="cardDate"></span>
+            </div>
+            <div class="ic-info__item ic-info__item--venue">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+              <span><b id="cardVenue"></b><small id="cardAddr"></small></span>
+            </div>
+            <div class="ic-info__item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+              <span id="cardTime"></span>
+            </div>
+          </div>
+          <p class="ic-end" data-i18n="cardEnd"></p>
+          <p class="ic-note" data-i18n="cardNote"></p>
+        </div>
+      </article>
+  </div>
+
+  <audio id="musicFile" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
