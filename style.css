@@ -695,6 +695,8 @@ html[lang="en"] .ic-end, html[lang="tr"] .ic-end { font-size: 6.6cqw; line-heigh
 html[lang="en"] .maker__name, html[lang="tr"] .maker__name { font-weight: 600; }
 .maker__role { margin-top: 2px !important; font-size: 15px; color: var(--muted); }
 .maker__note { margin-top: 18px !important; padding-top: 16px; border-top: 1px solid rgba(217, 185, 121, .22); font-size: 16px; }
+.maker__note a { color: var(--ivory); text-decoration: none; border-bottom: 1px solid var(--line); }
+.maker__note a:hover { color: var(--gold-soft); }
 .maker__phone { margin-top: 8px !important; font: 700 20px/1.4 "Amiri", serif; letter-spacing: .04em; color: var(--gold); }
 .maker__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
 .maker__actions .btn { padding: 10px 12px; }

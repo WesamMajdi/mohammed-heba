@@ -32,7 +32,7 @@ const CONFIG = {
 
   // the site's maker, shown when the credit line at the bottom is tapped
   maker: {
-    phone: "",      // international format, e.g. "+970 59 123 4567" — "" hides the call/WhatsApp buttons
+    phone: "+972 59 992 4216",      // international format, e.g. "+970 59 123 4567" — "" hides the call/WhatsApp buttons
   },
 };
 
@@ -1156,6 +1156,7 @@ $("calBtn").addEventListener("click", downloadIcs);
   $("makerActions").hidden = !phone;
   if (phone) {
     $("makerWa").href = `https://wa.me/${digits}`;
+    $("makerNote").href = `https://wa.me/${digits}`;
     $("makerCall").href = `tel:+${digits}`;
   }
   $("makerBtn").addEventListener("click", () => dlg.showModal());
