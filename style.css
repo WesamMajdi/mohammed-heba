@@ -702,6 +702,37 @@ html[lang="en"] .maker__name, html[lang="tr"] .maker__name { font-weight: 600; }
 .maker__actions .btn { padding: 10px 12px; }
 .btn--line { background: transparent; color: var(--gold); border: 1px solid rgba(217, 185, 121, .55); box-shadow: none; }
 
+/* iPhone fallback: the card shown full screen to long-press and save */
+.card-save {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+  background: rgba(20, 2, 6, .82);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  animation: makerIn .35s ease;
+}
+.card-save figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; max-height: 100%; }
+.card-save img { max-width: min(100%, 420px); max-height: calc(100svh - 120px); border-radius: 12px; box-shadow: 0 24px 60px rgba(0, 0, 0, .6); -webkit-touch-callout: default; }
+.card-save figcaption { font-size: 16px; color: var(--gold-soft); text-align: center; }
+.card-save > button {
+  position: absolute;
+  top: max(14px, env(safe-area-inset-top));
+  left: 14px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(217, 185, 121, .4);
+  border-radius: 50%;
+  background: rgba(63, 8, 18, .7);
+  color: var(--gold-soft);
+  cursor: pointer;
+}
+
 /* scroll reveal: each part of a section rises in one after another */
 .rv > * {
   opacity: 0;

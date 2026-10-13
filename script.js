@@ -59,6 +59,7 @@ const I18N = {
     makerNote: "بدك دعوة مثل هاي لمناسبتك؟ تواصل معي",
     makerWhatsapp: "واتساب", makerCall: "اتصال",
     cardFile: "دعوة-زفاف-محمد-وهبة",
+    cardLongPress: "اضغط مطوّلاً على الكرت ثم اختر «حفظ في الصور»",
     guestTo: "إلى {name}",
     verse: "﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً﴾",
     verseRef: "سورة الروم · 21",
@@ -118,6 +119,7 @@ const I18N = {
     makerNote: "Kendi davetiniz için benzerini mi istiyorsunuz? Bana ulaşın",
     makerWhatsapp: "WhatsApp", makerCall: "Ara",
     cardFile: "Mohammed-Heba-Davetiye",
+    cardLongPress: "Kartı kaydetmek için üzerine uzun basın ve «Fotoğraflara Kaydet»i seçin",
     guestTo: "Sayın {name}",
     verse: "“Kendileriyle huzur bulasınız diye size kendi cinsinizden eşler yaratması ve aranıza sevgi ve merhamet koyması da O'nun ayetlerindendir.”",
     verseRef: "Rûm Suresi · 21",
@@ -177,6 +179,7 @@ const I18N = {
     makerNote: "Want an invitation like this for your occasion? Get in touch",
     makerWhatsapp: "WhatsApp", makerCall: "Call",
     cardFile: "Mohammed-Heba-Wedding-Invitation",
+    cardLongPress: "Press and hold the card, then choose “Save to Photos”",
     guestTo: "For {name}",
     verse: "“And among His signs is that He created for you spouses from among yourselves, that you may find tranquillity in them; and He placed between you affection and mercy.”",
     verseRef: "Surah Ar-Rum · 21",
@@ -1035,7 +1038,7 @@ async function drawCard() {
   } catch (e) { /* artwork failed: the card still has its text */ }
 
   g.drawImage(tc, 0, 0, W, H, 0, 0, W, H);
-  return new Promise((resolve) => cv.toBlob(resolve, "image/png"));
+  return new Promise((resolve) => cv.toBlob(resolve, "image/jpeg", .92));
 }
 
 function prepareCardImage() {
@@ -1046,10 +1049,37 @@ function prepareCardImage() {
   return cardCache.promise;
 }
 
+// iPhone/iPad (Safari and Chrome both use Apple's WebKit) can't silently download a file,
+// so there the card goes through the share sheet ("Save Image" puts it in Photos).
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+function showCardToSave(url) {
+  const box = document.createElement("div");
+  box.className = "card-save";
+  box.innerHTML = `<figure><img alt=""><figcaption></figcaption></figure><button type="button" aria-label="×">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg></button>`;
+  box.querySelector("img").src = url;
+  box.querySelector("figcaption").textContent = t("cardLongPress");
+  const close = () => box.remove();
+  box.querySelector("button").addEventListener("click", close);
+  box.addEventListener("click", (e) => { if (e.target === box) close(); });
+  document.body.append(box);
+}
+
 async function saveCardImage() {
   const blob = await prepareCardImage();
   if (!blob) return;
-  const name = `${t("cardFile")}.png`;
+  const name = `${t("cardFile")}.jpg`;
+  if (isIOS) {
+    const file = new File([blob], name, { type: "image/jpeg" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ files: [file] }); return; }
+      catch (e) { if (e.name === "AbortError") return; }
+    }
+    // share sheet not available: show the card so it can be saved with a long press
+    showCardToSave(URL.createObjectURL(blob));
+    return;
+  }
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
@@ -1066,8 +1096,8 @@ async function saveCardImage() {
 function openInvitation() {
   const gate = $("gate");
   if (gate.classList.contains("is-opening")) return;
-  sound.play(true);
   saveCardImage();
+  sound.play(true);
   window.scrollTo({ top: 0, behavior: "instant" });
   gate.classList.add("is-opening");
   // the paper comes forward while the doors swing open; the page stays still until they're done
